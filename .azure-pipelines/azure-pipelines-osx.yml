@@ -68,7 +68,7 @@ jobs:
       osx_arm64_mpiopenmpipython3.9.____cpython:
         CONFIG: osx_arm64_mpiopenmpipython3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 18
+    maxParallel: 17
   timeoutInMinutes: 360
   variables: {}
 
