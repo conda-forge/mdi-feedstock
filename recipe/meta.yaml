@@ -21,7 +21,7 @@ requirements:
     - cmake >=3.13
     - make
     - ninja
-    - python {{ python }}  # [(build_platform != target_platform) and (target_platform not in ["osx-arm64", "osx-64"])]
+    - python {{ python }}  # [build_platform != target_platform]
     - {{ mpi }}
   host:
     - python {{ python }}
