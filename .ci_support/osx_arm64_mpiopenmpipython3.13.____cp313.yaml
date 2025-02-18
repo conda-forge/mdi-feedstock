@@ -37,7 +37,7 @@ pin_run_as_build:
 python:
 - 3.13.* *_cp313
 target_platform:
-- osx-64
+- osx-arm64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
