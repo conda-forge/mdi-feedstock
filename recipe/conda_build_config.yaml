@@ -3,10 +3,10 @@ mpi:
   - mpich  # [not win]
   - openmpi  # [not win]
 target_platform:
-  - linux-64
-  - linux-aarch64
-  - linux-ppc64le
-  - osx-64
-  - osx-arm64
+  - linux-64    # [linux64]
+  - linux-aarch64  # [linux]
+  - linux-ppc64le  # [linux]
+  - osx-64      # [osx]
+  - osx-arm64   # [osx]
 c_stdlib_version: #[not aarch64]
   - 10.15         #[not aarch64]
