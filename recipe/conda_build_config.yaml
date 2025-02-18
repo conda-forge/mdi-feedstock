@@ -8,3 +8,5 @@ target_platform:
   - linux-ppc64le
   - osx-64
   - osx-arm64
+c_stdlib_version:
+  - 10.15

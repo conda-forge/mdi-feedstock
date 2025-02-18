@@ -11,9 +11,6 @@ source:
 
 build:
   number: 4
-  script_env:
-    - MACOSX_DEPLOYMENT_TARGET=10.15
-    - CONDA_BUILD_SYSROOT=/opt/MacOSX10.15.sdk  # Change this based on available SDKs
 
 requirements:
   build:
