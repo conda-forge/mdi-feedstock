@@ -37,6 +37,12 @@ test:
     - test -f $PREFIX/lib/libmdi$SHLIB_EXT  # [unix]
     - if not exist "%LIBRARY_BIN%\\mdi%SHLIB_EXT%" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\mdi.lib" exit 1  # [win]
+    - echo "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
+    - python -c "import platform; print(platform.machine())"
+    - echo "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+    - which python
+    - echo "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR"
+    - python --version
   imports:
     - mdi
 
