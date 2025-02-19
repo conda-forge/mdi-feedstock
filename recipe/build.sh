@@ -4,6 +4,13 @@ set -ex
 
 export PATH=$BUILD_PREFIX/bin:$PATH  # Ensure conda python is used
 
+echo "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+echo "uname -m"
+uname -m
+echo "Doing file command: "
+file $PREFIX/bin/python
+echo "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+
 echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 echo "PREFIX: ${PREFIX}"
 echo "Python: ${PYTHON}"
