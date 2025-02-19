@@ -22,12 +22,15 @@ requirements:
     - make
     - ninja
     - {{ mpi }}
+    - mopac
   host:
     - python {{ python }}
     - {{ mpi }}
+    - mopac
   run:
     - python {{ python }}
     - {{ mpi }}
+    - mopac
 
 test:
   commands:
