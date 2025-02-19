@@ -43,8 +43,9 @@ test:
     - which python
     - echo "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR"
     - python --version
-  imports:
-    - mdi
+
+#  imports:
+#    - mdi
 
 about:
   home: https://github.com/MolSSI/MDI_Library
