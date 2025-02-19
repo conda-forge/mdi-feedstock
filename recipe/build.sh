@@ -5,9 +5,18 @@ set -ex
 export PATH=$BUILD_PREFIX/bin:$PATH  # Ensure conda python is used
 
 echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+echo "PREFIX: ${PREFIX}"
 echo "Python: ${PYTHON}"
+echo "Which Python: "
+which python
 echo "Version: "
 python --version
+echo "Which Python3"
+which python3
+echo "Python3 Version: "
+python3 --version
+echo "Python ls: "
+ls $PREFIX/bin/python
 echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 
 # Configure step
