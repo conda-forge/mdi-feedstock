@@ -40,7 +40,8 @@ test:
     - if not exist "%LIBRARY_BIN%\\mdi%SHLIB_EXT%" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\mdi.lib" exit 1  # [win]
     - echo "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU"
-    - echo "CROSSCOMPILING_EMULATOR: ${CROSSCOMPILING_EMULATOR}"
+    - echo "CROSSCOMPILING_EMULATOR    ${CROSSCOMPILING_EMULATOR}"
+
 #    - echo "Checking Python location:"
 #    - which python
 #    - echo "Checking system architecture:"
