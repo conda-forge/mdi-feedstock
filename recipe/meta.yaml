@@ -39,24 +39,8 @@ test:
     - test -f $PREFIX/lib/libmdi$SHLIB_EXT  # [unix]
     - if not exist "%LIBRARY_BIN%\\mdi%SHLIB_EXT%" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\mdi.lib" exit 1  # [win]
-    - echo "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU"
-    - echo "CROSSCOMPILING_EMULATOR    ${CROSSCOMPILING_EMULATOR}"
-
-#    - echo "Checking Python location:"
-#    - which python
-#    - echo "Checking system architecture:"
-#    - uname -m
-#    - echo "Checking Conda environment:"
-#    - conda list
-#    - echo "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
-#    - python -c "import platform; print(platform.machine())"
-#    - echo "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
-#    - which python
-#    - echo "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR"
-#    - python --version
-
-#  imports:
-#    - mdi
+  imports:
+    - mdi      # [target_platform != osx_arm64]
 
 about:
   home: https://github.com/MolSSI/MDI_Library
