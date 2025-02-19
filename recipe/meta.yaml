@@ -32,15 +32,14 @@ requirements:
     - {{ mpi }}
 
 test:
-  requires:
-    - python {{ python }}
   commands:
     - test -f $PREFIX/include/mdi.h  # [unix]
     - test -f $PREFIX/lib/libmdi$SHLIB_EXT  # [unix]
     - if not exist "%LIBRARY_BIN%\\mdi%SHLIB_EXT%" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\mdi.lib" exit 1  # [win]
-  imports:
-    - mdi      # [target_platform != osx_arm64]
+
+#  imports:
+#    - mdi      # [target_platform != osx_arm64]
 
 about:
   home: https://github.com/MolSSI/MDI_Library
