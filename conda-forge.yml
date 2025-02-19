@@ -8,3 +8,5 @@ provider:
   linux_aarch64: azure
   linux_ppc64le: azure
   osx_arm64: azure
+build_platform:
+  osx_arm64: osx-64
