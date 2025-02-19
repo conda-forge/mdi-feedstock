@@ -18,6 +18,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
     - {{ stdlib("c") }}
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - python {{ python }}                    # [build_platform != target_platform]
     - cmake >=3.13
     - make
