@@ -2,9 +2,6 @@
 
 set -ex
 
-export PATH=$BUILD_PREFIX/bin:$PATH  # Ensure conda python is used
-export BUILD_PREFIX=$PREFIX
-
 echo "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
 echo "uname -m"
 uname -m
