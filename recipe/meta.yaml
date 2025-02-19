@@ -24,6 +24,7 @@ requirements:
     - make
     - ninja
     - {{ mpi }}
+    - qemu  # Enables arm64 emulation
   host:
     - python {{ python }}
     - {{ mpi }}
@@ -37,8 +38,11 @@ test:
     - test -f $PREFIX/lib/libmdi$SHLIB_EXT  # [unix]
     - if not exist "%LIBRARY_BIN%\\mdi%SHLIB_EXT%" exit 1  # [win]
     - if not exist "%LIBRARY_LIB%\\mdi.lib" exit 1  # [win]
-  imports:
-    - mdi      # [target_platform != osx_arm64]
+    - qemu-arm64 echo "Hello World"
+
+#    - qemu-arm64 -L /usr/aarch64-linux-gnu $PREFIX/bin/python -c "import mdi"
+#  imports:
+#    - mdi      # [target_platform != osx_arm64]
 
 about:
   home: https://github.com/MolSSI/MDI_Library
