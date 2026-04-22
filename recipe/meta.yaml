@@ -1,5 +1,5 @@
 {% set name = "mdi" %}
-{% set version = "1.4.37" %}
+{% set version = "1.4.39" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/MolSSI/MDI_Library/archive/v{{ version }}.tar.gz
-  sha256: 01276936ff33371d51dc61ab35b432c08c9e73fe4d1e798378b25e85e4ec1cb8
+  sha256: fc2fe29c0268750d58faccfe6bebe0971a09354b372aef42013decda784c7eaa
 
 build:
   number: 0
