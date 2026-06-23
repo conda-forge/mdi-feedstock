@@ -11,6 +11,12 @@ source:
 
 build:
   number: 0
+  {% if mpi != 'nompi' %}
+  {% set mpi_prefix = "mpi_" + mpi %}
+  {% else %}
+  {% set mpi_prefix = "nompi" %}
+  {% endif %}
+  string: py{{ CONDA_PY }}_h{{ PKG_HASH }}_{{ mpi_prefix }}_{{ PKG_BUILDNUM }}
 
 requirements:
   build:
@@ -23,13 +29,13 @@ requirements:
     - cmake >=3.13
     - make
     - ninja
-    - {{ mpi }}
+    - {{ mpi }}  # [mpi != 'nompi']
   host:
     - python {{ python }}
-    - {{ mpi }}
+    - {{ mpi }}  # [mpi != 'nompi']
   run:
     - python {{ python }}
-    - {{ mpi }}
+    - {{ mpi }}  # [mpi != 'nompi']
 
 test:
   commands:

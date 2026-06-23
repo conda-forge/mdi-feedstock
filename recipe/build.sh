@@ -2,6 +2,12 @@
 
 set -ex
 
+if [ "${mpi}" == "nompi" ]; then
+  MDI_MPI=OFF
+else
+  MDI_MPI=ON
+fi
+
 # Configure step
 cmake -Bbuild -GNinja \
     ${CMAKE_ARGS} \
@@ -12,6 +18,7 @@ cmake -Bbuild -GNinja \
     -DMDI_Fortran=ON \
     -DMDI_Python=ON \
     -DMDI_CXX=ON \
+    -DMDI_USE_MPI=${MDI_MPI} \
     -DMDI_Python_PACKAGE=ON
 
 # Build step

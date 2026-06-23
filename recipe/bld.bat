@@ -8,6 +8,12 @@ set CXXFLAGS=%CXXFLAGS:-GL=%
 set CFLAGS=%CFLAGS:-GL=%
 )
 
+if "%mpi%" == "nompi" (
+    set MDI_MPI=OFF
+) else (
+    set MDI_MPI=ON
+)
+
 cmake -Bbuild -GNinja ^
     %CMAKE_ARGS% ^
     -DCMAKE_BUILD_TYPE=Release ^
@@ -17,6 +23,7 @@ cmake -Bbuild -GNinja ^
     -DMDI_Fortran=ON ^
     -DMDI_Python=ON ^
     -DMDI_CXX=ON ^
+    -DMDI_USE_MPI=%MDI_MPI% ^
     -DMDI_Python_PACKAGE=ON
 
 cmake --build build
